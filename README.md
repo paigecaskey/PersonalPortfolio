@@ -22,7 +22,7 @@ Additionally, the color scheme, typography, and imagery were chosen to reflect m
 The development of the portfolio website involved utilizing various web technologies and frameworks to create a responsive and functional design. HTML, CSS, and JavaScript were used to build the frontend interface, while frameworks like Bootstrap were leveraged to ensure cross-browser compatibility and responsiveness.
 Furthermore, the website was optimized for performance and accessibility to ensure a seamless user experience across different devices and platforms. Careful attention was paid to details such as page load times, image compression, and semantic HTML markup to enhance usability and search engine visibility.
 
-## Features
+## Features:
 The portfolio website includes several key features to effectively showcase my skills, projects, and experience. These features include:
 
 Project Showcase: A dedicated section to highlight my projects, including descriptions, technologies used, and links to live demos or GitHub repositories.
