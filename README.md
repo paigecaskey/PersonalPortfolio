@@ -1,5 +1,7 @@
+
 # Personal Portfolio
-he purpose of this project was to develop a personal portfolio website showcasing my skills, projects, and experience. The portfolio serves as a professional platform to present my work to potential employers, collaborators, and the broader community. By creating a well-organized and visually appealing portfolio, I aim to highlight my expertise, accomplishments, and passion for web development and data science.
+## Link to website deployment: https://personal-portfolio1-alpha.vercel.app/
+The purpose of this project was to develop a personal portfolio website showcasing my skills, projects, and experience. The portfolio serves as a professional platform to present my work to potential employers, collaborators, and the broader community. By creating a well-organized and visually appealing portfolio, I aim to highlight my expertise, accomplishments, and passion for web development and data science.
 ## Table of Contents
 [Intro](https://github.com/paigecaskey/PersonalPortfolio/#Intro)
 
