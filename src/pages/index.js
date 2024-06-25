@@ -10,8 +10,8 @@ const HomePage = () => {
       <div className={styles.nameContainer}>
         <p className={styles.name}>☆ PAIGE CASKEY ☆</p>
         <p className={styles.about}>
-          I am a <span className={styles.emph}>Data Scientist</span> specializing in{' '}
-          <span className={styles.emph}>Recommendation Systems</span> and{' '}
+          I am a <span className={styles.emph}>Data Scientist</span> specializing in
+          <span className={styles.emph}>Recommendation Systems</span> and
           <span className={styles.emph}>Information Theory</span>
           <br />
           Let&apos;s work together!
