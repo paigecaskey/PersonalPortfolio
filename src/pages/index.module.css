@@ -1,0 +1,88 @@
+.name{
+    font-size: 100px;
+    font-family: var(--fun-font);
+    text-shadow: 2px 2px 4px rgba(199, 119, 119, 0.5);
+}
+.nameContainer{
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.about { 
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+}
+
+.leftsection{
+    width: 50%;
+    padding: 20px;
+}
+
+.rightsection{
+    max-width: 100%;
+    padding: 30px;
+    margin: 5px;
+}
+
+.emph {
+    font-size: 25px;
+    font-weight: bold;
+    transform: var(--wide-text);
+}
+
+.skilllist{
+    list-style: none;
+}
+
+.skill{
+    padding: 3px;
+    font-style: italic;
+    color: white;
+    font-weight: bold;
+    transform: var(--wide-text);
+}
+
+.aboutButton{
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    font-weight: bold;
+    font-style:italic;
+    transition: transform 0.3s ease;
+    padding: 10px 30px;
+    border-radius: 20px;
+    background-color: var(--background-color);
+}
+
+.aboutButton a{
+    text-decoration: none;
+}
+
+.aboutButton:hover{
+    transform: var(--wide-text);
+}
+
+.aboutContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 1000px) {
+    .name{
+        font-size: 45px;
+    }
+    .emph{
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bitter:ital,wght@0,100..900;1,100..900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inconsolata:wght@200..900&family=Jersey+10&family=Jersey+20&family=Micro+5&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&display=swap" rel="stylesheet');
+@import url('https://fonts.googleapis.com/css2?family=Arizonia&display=swap" rel="stylesheet');
+@import url('https://fonts.googleapis.com/css2?family=Arizonia&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet');
+@import url('https://fonts.googleapis.com/css2?family=Gloock&display=swap" rel="stylesheet"');
+:root {
+    --header-font-size: calc(4px + 2vmin);
+    --border: 2px solid #f3f4f9;
+    --background-color: #EFEFD0;
+    --text-color: #EF6450;
+    --black: #313638;
+    --blue: #5E7CE2;
+    --green: #5E7CE2;
+
+
+
+    --color-gray-light:#f3f4f9;
+    --color-gray-medium: #414141;
+    --color-gray-dark: #242424;
+    --fun-font: "Glook", serif;
+    --normal-font: "Montserrat", sans-serif;
+    --code-font: "Source Code Pro", monospace;
+    --wide-text: scaleX(1.25);
+    --wider-text: scaleX(1.5);
+    background-color: var(--background-color);
+}
+* {
+    font-family: var(--code-font);
+    color: var(--text-color);
+}
+
+.h1 {
+    font-style: italic;
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+    transform: var(--wide-text);
+}
+
+.h2{
+    font-size: 25px;
+}
+
+
+
+
