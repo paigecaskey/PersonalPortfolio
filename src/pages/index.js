@@ -1,3 +1,5 @@
+// src/pages/index.js
+
 import Layout from '../components/Layout';
 import styles from './index.module.css';
 import Link from 'next/link';
@@ -12,7 +14,7 @@ const HomePage = () => {
           <span className={styles.emph}>Recommendation Systems</span> and{' '}
           <span className={styles.emph}>Information Theory</span>
           <br />
-          Lets work together!
+          Let&apos;s work together!
         </p>
       </div>
     </Layout>
@@ -20,4 +22,5 @@ const HomePage = () => {
 };
 
 export default HomePage;
+
 
