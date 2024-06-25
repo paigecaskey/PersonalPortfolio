@@ -13,6 +13,7 @@
     background-color: transparent;
     z-index: 100000;
     margin-left: -7px;
+    background-color: var(--background-color);
 }
 
 .name {
