@@ -12,7 +12,7 @@ const HomePage = () => {
           <span className={styles.emph}>Recommendation Systems</span> and{' '}
           <span className={styles.emph}>Information Theory</span>
           <br />
-          Let's work together!
+          Let&apos;s work together!
         </p>
       </div>
     </Layout>
