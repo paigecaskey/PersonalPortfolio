@@ -7,9 +7,11 @@ const PortfolioPage = () => {
   return (
     <Layout>
       <div className={styles.buttonContainer}>
+              {/*
       <a download href= "/PAIGECASKEYresume.pdf">
         <button class={styles.downloadButton}>DOWNLOAD RESUME</button>
       </a>
+  */}
       </div>
       <div>
         <PortfolioCard

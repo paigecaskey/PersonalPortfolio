@@ -95,10 +95,10 @@
       }
     
       .tab {
-        font-size: 20px; /* Reduce tab font size on smaller screens */
+        font-size: 15px; /* Reduce tab font size on smaller screens */
       }
     
       .tabContent {
-        font-size: 14px; /* Reduce content font size on smaller screens */
+        font-size: 10px; /* Reduce content font size on smaller screens */
       }    
 }
