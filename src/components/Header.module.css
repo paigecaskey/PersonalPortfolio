@@ -1,67 +1,45 @@
-.header {
-    min-height: 3vh;
+  .custombutton {
+    all: unset;
+    border: 2px outset #dfdfdf;
+    background: #c0c0c0;
+    padding: 1px;
+    cursor: pointer;
+    margin: 4px;
+    margin-right: 10px;
+    font-size: 16px;
+
+  }
+
+  .link {
+    color: black;
+    text-decoration: none;
+  }
+
+  .customtitlebar {
+    position: fixed; /* Keep it at the top */
+    top: 0;
+    left: 0;
+    width: 100%; /* Extend full width */
+    height: 35px; /* Standard Windows 98 title bar height */
+    background: #aeaeae; /* Match Windows 98 style */
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
-    font-size: 20x;
-    height: 15;
-    position: fixed;
-    top: -5px;
-    width: 100%;
-    background-color: transparent;
-    z-index: 100000;
-    margin-left: -7px;
-    background-color: var(--background-color);
-}
-
-.name {
-    font-family: var(--fun-font);
-    font-size: 20px;
-    font-weight: 500px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    margin-left: 15px;
-    margin-top: 30px;
-    text-decoration: none;
-}
-
-.nameContainer a{
-    text-decoration: none;
-}
-
-
-.navLinks {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: flex-start;
-    margin-left: 0px;
-    margin-top: 23px;
-
-}
-
-.navItem {
-    list-style: none;
-    transform: var(--wide-text);
-    transition: transform 0.3s ease;
     padding: 5px;
+    z-index: 1000; /* Ensure it's above other elements */
+    border-bottom: 2px solid #c8c8c8; /* Optional for a more defined look */
+    border: 2px inset #7c7c7c;
+  }
 
-}
-
-.navItem a{
-    font-family: var(--fun-font);
-    font-weight: bold;
-    text-decoration: none;
-    margin: 25px;
-}
-
-.navItem:hover{
-    transform: var(--wider-text);
-}
-
-@media screen and (max-width: 700px) {
+  .customtitlebarcontrols {
+    display: flex;
+  }
+  
+  .custombutton:hover {
+    background: #a0a0a0;
+  }
+  
+@media screen and (max-width: 1000px) {
     .navItem a {
         margin: 10px;
         font-size: 12px;

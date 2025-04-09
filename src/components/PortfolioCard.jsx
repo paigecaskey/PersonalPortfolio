@@ -2,20 +2,20 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from '../pages/portfolio.module.css';
 
-const PortfolioCard = ({ imageSrc, title, description, link }) => {
+const PortfolioCard = ({ title, description, link, tags }) => {
   return (
     <div className={styles.card}>
-      <div className={styles.imageContainer}>
-        <img src={imageSrc} alt="Card Image" className={styles.cardImage} />
-      </div>
       <div className={styles.content}>
         <h2 className={styles.cardTitle}>{title}</h2>
         <p className={styles.cardDescription}>{description}</p>
-        {link && (
-          <a href={link} target="_blank" rel="noopener noreferrer" className={styles.link}>
-            <h3>Click to View</h3>
-          </a>
-        )}
+        <div className = {styles.buttonAndTags}>
+          {link && (
+            <a href={link} target="_blank" rel="noopener noreferrer" className={styles.link}>
+              <h3>CLICK TO VIEW</h3>
+            </a>
+          )}
+            <p className = {styles.tags}>{tags}</p>
+          </div>
       </div>
     </div>
   );

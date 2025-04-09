@@ -6,26 +6,23 @@
   }
   
   .downloadButton {
-    background-color: var(--text-color);
-    color: var(--background-color);
     padding: 10px 20px;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 30px;
     font-family: var(--fun-font);
   }
 
   .downloadButton:hover {
-    font-size: 17px;
+    background: #a0a0a0;
   }
+
   .card {
     display: flex;
     align-items: flex-start; 
-    margin-bottom: 20px; 
-    background-color: #efefc5; 
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
-    border-radius: 8px; 
+    margin-bottom: 25px; 
+    background-color: var(--background-color); 
+    box-shadow: 0 0 10px var(--dark-pink); 
     overflow: hidden; 
     margin-top: 10px;
     padding: 15px;
@@ -50,28 +47,50 @@
   }
   
   .cardTitle {
-    font-size: 20px; 
+    color: var(--dark-pink);
+    font-size: 25px; 
     margin-top: 0; 
     margin-bottom: 10px;
   }
 
-  .cardLink {
-    position: absolute;
-    top: 10px;
-    right: 10px;
+  .buttonAndTags {
+    display: flex;
+    align-items: center;
+    gap: 1rem; 
+  }
+
+  .link {
     text-decoration: none;
   }
-  
-  .cardLink h3 {
-    font-size: 14px;
-    font-weight: normal;
+
+  .link h3 {
+    background-color: rgb(193, 193, 193);
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 6px;
     margin: 0;
+    border: 2px outset #dfdfdf;
+    background: #c0c0c0;
+    font-weight: normal;
+  }
+
+  .link h3:hover {
+    background: #a0a0a0;
   }
   
   .cardDescription {
-    font-size: 16px; 
-    color: #666666; 
+    font-size: 20px; 
     margin-top: 0; 
+  }
+
+  .lastCard {
+    margin-bottom: 100px;
+  }
+
+  .tags {
+    font-size: 17px;
+    color: var(--dark-pink);
   }
   
   @media screen and (max-width: 768px) {

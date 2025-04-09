@@ -2,28 +2,36 @@ import React from 'react';
 import Link from 'next/link';
 import headerStyles from './Header.module.css';
 
-
 const Header = () => {
   return (
-    <header className={headerStyles.header}>
-      <div className = {headerStyles.nameContainer}>
-      <Link href="/"><h1 className={headerStyles.name}>HOME</h1></Link>
+    <div className={`window ${headerStyles.window}`}>
+      <div className={`title-bar ${headerStyles.customtitlebar}`}>
+        <div className="title-bar-text">
+        <Link href="/" className={headerStyles.link}>
+          <button className={headerStyles.custombutton}>HOME</button>
+        </Link>
+        <Link href="/about" className={headerStyles.link}>
+          <button className={headerStyles.custombutton}>ABOUT</button>
+        </Link>
+        <Link href="/portfolio" className={headerStyles.link}>
+          <button className={headerStyles.custombutton}>PROJECTS</button>
+        </Link>
+        <a
+          href="https://medium.com/@paigecaskey"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={headerStyles.link}
+        >
+          <button className={headerStyles.custombutton}>BLOG</button>
+        </a>
+        </div>
+        <div className="title-bar-controls">
+        <button aria-label="Minimize" className={headerStyles.custombutton}></button>
+          <button aria-label="Maximize" className={headerStyles.custombutton}></button>
+          <button aria-label="Close" className={headerStyles.custombutton}></button>
+          </div>
       </div>
-      <nav>
-        <ul className={headerStyles.navLinks}>
-          <li className={headerStyles.navItem}>
-            <Link href="/about">
-              ABOUT
-            </Link>
-          </li>
-          <li className={headerStyles.navItem}>
-            <Link href="/portfolio">
-              PORTFOLIO
-            </Link>
-          </li>
-        </ul>
-      </nav>
-    </header>
+    </div>
   );
 };
 
