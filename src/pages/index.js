@@ -26,7 +26,7 @@ const HomePage = () => {
             <li>WEB DEVELOPMENT</li>
           </ul>
           <NowPlaying />
-          <p className={indexStyles.playingcaption}>what I&apos;m listening to on spotify rn!!!</p>
+          <p className={indexStyles.playingcaption}>what Im listening to on spotify rn!!!</p>
       </div>
       <div className={indexStyles.avatar}>
             <Image src={avatar} alt="GitHub" />
