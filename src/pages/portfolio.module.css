@@ -103,5 +103,12 @@
       max-width: 100%; 
       margin-bottom: 10px; 
     }
+
+    .link h3 {
+      font-size: 15px;
+      padding: 4px;
+      white-space: nowrap;       
+      overflow: hidden;
+    }
   }
   

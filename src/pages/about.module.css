@@ -105,7 +105,7 @@
 
 @media screen and (max-width: 950px) {
     .leftsection img {
-        height: 275px;
+        height: 200px;
 
     }
     .aboutContainer {
@@ -118,6 +118,7 @@
       .rightsection {
         width: 100%; 
         max-width: 100%; 
+        margin-bottom: 30px;
       }
     
       .tab {
