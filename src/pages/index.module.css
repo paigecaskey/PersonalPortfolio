@@ -1,11 +1,10 @@
 .name{
-    font-size: 90px;
+    font-size: 100px;
     font-family: var(--fun-font);
     border: 2px solid gray;
     padding: 20px;
     box-shadow: 3px 3px 0px black;
 }
-
 
 .nameContainer{
     height: 70vh;
@@ -86,7 +85,7 @@
 .avatar img{
     height: 100px;
     width: 100px;
-    margin-top: -6vh;
+    margin-top: -8vh;
 }
 
 .playingcaption {
@@ -102,7 +101,7 @@
     .avatar img{
         height: 85px;
         width: 85px;
-        margin-top: 12vh;
+        margin-top: 8vh;
     }
 }
 
