@@ -2,7 +2,6 @@ import Layout from '../components/Layout';
 import Image from 'next/image';
 import indexStyles from './index.module.css';
 import NowPlaying from '../components/NowPlaying';
-import TopArtist from '../components/TopArtist';
 import Window from '../components/Window';
 import avatar from '../images/avatar.png';
 
@@ -27,9 +26,6 @@ const HomePage = () => {
         </Window>
 
         <Window title="ABOUT ME" className={indexStyles['window-medium']}>
-                  <Window title="TOP SPOTIFY ARTIST" className={indexStyles['window-medium']}>
-                    <TopArtist />
-                  </Window>
           <p>I&apos;m an <b>AI Scientist, creative technologist, and community advocate</b> passionate about building technology that is <b>human-centered, artistic, and inclusive.</b></p>
           <p>My work spans across <b>research, devlopment, art, and leadership</b>. I combine innovation, empathy, and creativity to promote a thoughtful future with AI.</p>
         </Window>
