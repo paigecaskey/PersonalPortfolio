@@ -22,7 +22,7 @@ const CareerPage = () => {
               <h2>CHAPMAN UNIVERSITY</h2>
               <h3>B.S. Data Science (2021 - 2025)</h3>
               <p><strong>MINOR:</strong> Business Administration</p>
-              <p><strong>HONORS:</strong> Dean's Scholar, Provost List</p>
+              <p><strong>HONORS:</strong> Dean&apos;s Scholar, Provost List</p>
               <p><strong>FAVORITE CLASSES:</strong> Math Foundations of Machine Learning, Artificial Intelligence, Machine Learning, Digital Logic Through Minecraft</p>
               <a download href="/PAIGECASKEYresume.pdf" className={careerStyles.downloadLink}>
                 <button class={careerStyles.button} style={{fontSize: '14px'}}>DOWNLOAD MY RESUME :)</button>

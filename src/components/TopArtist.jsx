@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 function TopArtist() {
   const [artist, setArtist] = useState(null);
@@ -24,7 +25,7 @@ function TopArtist() {
 
   return (
     <div style={{ display: 'flex', alignItems: 'center', flexDirection: 'column', gap: 8 }}>
-      <img src={artist.imageUrl} alt={artist.name} style={{ width: 80, height: 80, borderRadius: '50%' }} />
+      <Image src={artist.imageUrl} alt={artist.name} width={80} height={80} style={{ borderRadius: '50%' }} />
       <div style={{ fontWeight: 'bold', fontSize: 18 }}>{artist.name}</div>
       <div style={{ fontSize: 14, color: '#666' }}>Top Spotify Artist</div>
     </div>
