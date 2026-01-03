@@ -57,9 +57,12 @@
         padding: 10px;
     }
     .title {
-        font-size: 12px;
+        font-size: 35px;
     }
     .artist {
         font-size: 10px;
+    }
+    .defaultError {
+        font-size: 25px;
     }
 }

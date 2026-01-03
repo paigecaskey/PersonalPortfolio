@@ -6,7 +6,7 @@
 :root {
     --header-font-size: calc(4px + 2vmin);
     --border: 2px solid #f3f4f9;
-    --background-color: #FFDDE1;
+    --background-color: #ffffff;
     --text-color: #B33951;
     --dark-pink: #DD92A1;
 
@@ -39,7 +39,7 @@
 }
 
 .title-bar {
-    background: linear-gradient(to right, #DD92A1, #EBC1C9) !important;
+    background: linear-gradient(to right, #5f5f5f, #f9f9f9) !important;
   }
 
 

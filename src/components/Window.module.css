@@ -1,0 +1,146 @@
+.window {
+    width: 100%;
+    height: auto;
+    margin: 10px;
+    position: relative;
+    border: var(--border);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 1%;
+}
+
+.titlebartext {
+    font-size: 18px;
+    color: white;
+    transform: var(--wide-text);
+    margin-left: 15px;
+    padding: 5px;
+}
+
+.title-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 2px solid #ccc;
+    font-size: 16px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to right, #4a90e2, #9013fe);
+    border-radius: 1%;
+}
+
+.title-bar-controls {
+    display: flex;
+    gap: 10px;
+}
+
+.title-bar-controls button {
+    width: 12px;
+    height: 12px;
+    background-color: gray;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+.title-bar-controls button:hover {
+    background-color: darkgray;
+}
+
+.windowbody {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 20px;
+    font-size: 15px;
+    margin: 0;
+    min-height: 100px;
+}
+
+.windowbody p {
+    margin: 5px 0;
+    padding: 0;
+    line-height: 1.4;
+    font-size: 15px;
+}
+
+.windowbody h2 {
+    margin: 10px 0;
+    font-size: 25px;
+}
+
+.windowbody ul {
+    text-align: left;
+    margin: 10px 0;
+}
+
+.avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.avatar img {
+    height: 100px;
+    width: 100px;
+    margin-top: 10px;
+}
+    .window {
+        width: calc(100% - 20px);
+        margin: 5px;
+        margin-bottom: 45px;
+    }
+    .titlebartext {
+        font-size: 20px;
+    }
+    .windowbody h2 {
+        font-size: 30px;
+    }
+    .windowbody p {
+        font-size: 20px;
+    }
+    .windowbody li {
+        font-size: 25px;
+    }
+
+.windowbody button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    background-color: #c0c0c0;
+    border: 2px outset #c0c0c0;
+    border-radius: 0;
+    font-weight: bold;
+    font-size: 25px;
+    cursor: pointer;
+    text-align: center;
+    font-family: inherit;
+}
+
+.windowbody button:hover {
+    background-color: #dfdfdf;
+}
+
+.windowbody button:active {
+    border: 2px inset #c0c0c0;
+    background-color: #a0a0a0;
+}
+
+@media screen and (max-width: 1000px) {
+    .windowbody {
+        min-height: 100px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .windowbody button {
+        font-size: 30px;
+        padding: 10px;
+        margin: 6px 0;
+    }
+    .windowbody h3{
+        font-size: 25px;
+    }
+}

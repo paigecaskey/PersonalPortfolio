@@ -9,6 +9,10 @@ function MyApp({ Component, pageProps }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
         <title>Paige Caskey</title>
+        {/* LinkedIn Embed Script */}
+        <script src="https://platform.linkedin.com/in.js" type="text/javascript">
+          lang: en_US
+        </script>
       </Head>
       <Component {...pageProps} />
     </>

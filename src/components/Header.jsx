@@ -10,20 +10,15 @@ const Header = () => {
         <Link href="/" className={headerStyles.link}>
           <button className={headerStyles.custombutton}>HOME</button>
         </Link>
-        <Link href="/about" className={headerStyles.link}>
-          <button className={headerStyles.custombutton}>ABOUT</button>
+        <Link href="/career" className={headerStyles.link}>
+          <button className={headerStyles.custombutton}>CAREER</button>
         </Link>
-        <Link href="/portfolio" className={headerStyles.link}>
-          <button className={headerStyles.custombutton}>PROJECTS</button>
+        <Link href="/leadership" className={headerStyles.link}>
+          <button className={headerStyles.custombutton}>LEADERSHIP</button>
         </Link>
-        <a
-          href="https://medium.com/@paigecaskey"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={headerStyles.link}
-        >
-          <button className={headerStyles.custombutton}>BLOG</button>
-        </a>
+        <Link href="/creations" className={headerStyles.link}>
+          <button className={headerStyles.custombutton}>CREATIONS</button>
+        </Link>
         </div>
         <div className="title-bar-controls">
         <button aria-label="Minimize" className={headerStyles.custombutton}></button>

@@ -15,7 +15,7 @@
     margin: 5px; 
     border: 2px solid white;
     padding: 5px;
-    background-color: var(--dark-pink);
+    background-color: grey;
     image-rendering: pixelated;
   }
 
