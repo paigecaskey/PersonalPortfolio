@@ -1,6 +1,6 @@
+
 import React, { useState, useEffect } from 'react';
 import styles from './NowPlaying.module.css';
-import Image from 'next/image';
 
 function NowPlaying() {
     const [song, setSong] = useState(null);
@@ -31,7 +31,9 @@ function NowPlaying() {
             )}
             {song && (
                 <div className={styles.songInfo}>
-                    <Image className={styles.albumArt} src={song.albumImageUrl} alt="cover art" width={64} height={64} />
+                    {song.albumImageUrl ? (
+                        <img className={styles.albumArt} src={song.albumImageUrl} alt="cover art" width={64} height={64} style={{ borderRadius: 8 }} />
+                    ) : null}
                     <div className={styles.details}>
                         <div className={styles.title}>{song.title}</div>
                         <div className={styles.artist}>{song.artist}</div>
