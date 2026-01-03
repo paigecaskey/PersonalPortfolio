@@ -21,7 +21,7 @@ const HomePage = () => {
               <div className={indexStyles.nowplayingbox}>
                 <NowPlaying />
               </div>
-              <p className={indexStyles.playingcaption}> ^ what I'm listening to on spotify ^</p>
+              <p className={indexStyles.playingcaption}> ^ what I&apos;m listening to on spotify ^</p>
             </div>
           </div>
         </Window>
