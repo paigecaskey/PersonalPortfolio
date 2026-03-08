@@ -6,24 +6,35 @@
 :root {
     --header-font-size: calc(4px + 2vmin);
     --border: 2px solid #f3f4f9;
-    --background-color: #ffffff;
+    --background-color: #e7d0e2;
     --text-color: #B33951;
     --dark-pink: #DD92A1;
+    --darker-pink: #6f5269;
 
 
 
     --color-gray-light:#f3f4f9;
     --color-gray-medium: #414141;
     --color-gray-dark: #242424;
-    --fun-font: "Jersey 10", sans-serif;
+    --fun-font: Verdana, sans-serif;
     --normal-font: "Montserrat", sans-serif;
     --code-font: "Source Code Pro", monospace;
     --wide-text: scaleX(1.25);
     --wider-text: scaleX(1.5);
     background-color: var(--background-color);
+
+    --global-letter-spacing: 0.1em;
 }
 * {
     font-family: var(--fun-font);
+}
+
+
+body {
+  letter-spacing: var(--global-letter-spacing);
+  font-family: "Verdana", "Tahoma", sans-serif;
+  background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
+  background-color: var(--background-color);
 }
 
 .h1 {
@@ -39,8 +50,21 @@
 }
 
 .title-bar {
-    background: linear-gradient(to right, #5f5f5f, #f9f9f9) !important;
-  }
+    background: linear-gradient(to right, #ead1ec, #c49fcb) !important;
+    border-bottom: 2px solid #9f7ac1 !important;
+}
+
+.title-bar .title-bar-text {
+    color: #4c2d66 !important;
+    font-family: Verdana, Tahoma, "Trebuchet MS", sans-serif;
+    letter-spacing: 0.04em;
+}
+
+.title-bar-controls button {
+    border: 1px solid #8a66ad !important;
+    border-radius: 0 !important;
+    background: linear-gradient(180deg, #f2e2f3 0%, #d0b1d8 100%) !important;
+}
 
 
 

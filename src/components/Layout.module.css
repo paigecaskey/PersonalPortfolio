@@ -1,0 +1,154 @@
+.layout {
+	min-height: 100vh;
+	position: relative;
+	overflow-x: clip;
+}
+
+.stickerLayer {
+	position: absolute;
+	inset: 0;
+	pointer-events: none;
+	z-index: 2;
+}
+
+.stickerLayerBehind {
+	z-index: 0;
+}
+
+.divider {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	width: min(900px, calc(100% - 80px));
+	height: auto;
+	opacity: 0.95;
+	z-index: 1;
+}
+
+.dividerTop {
+	top: -10px;
+}
+
+.dividerBottom {
+	bottom: 10px;
+}
+
+.sticker {
+	position: absolute;
+	height: auto;
+	opacity: 0.92;
+	filter: drop-shadow(0 2px 0 rgba(76, 45, 102, 0.28));
+	z-index: 3;
+}
+
+.welcome {
+	top: -16px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: clamp(120px, 20vw, 210px);
+}
+
+@media (min-width: 701px) {
+	.welcome {
+		top: -30px;
+	}
+}
+
+.flowerOne {
+	top: 190px;
+	right: 2.5%;
+	width: clamp(56px, 7vw, 80px);
+}
+
+.flowerTwo {
+	bottom: 205px;
+	left: 3%;
+	width: clamp(52px, 6.5vw, 74px);
+}
+
+.flowerThree {
+	top: 58%;
+	left: 2%;
+	width: clamp(46px, 6vw, 66px);
+}
+
+.starOne {
+	top: 280px;
+	left: 52%;
+	transform: translateX(-50%) rotate(-8deg);
+	width: clamp(42px, 5.6vw, 62px);
+}
+
+.starTwo {
+	bottom: 136px;
+	right: 9%;
+	width: clamp(48px, 6vw, 70px);
+}
+
+.starThree {
+	top: 114px;
+	left: 1%;
+	width: clamp(44px, 5.8vw, 62px);
+}
+
+.homeButtonWrap {
+	position: fixed;
+	top: 10px;
+	left: 10px;
+	z-index: 1000;
+}
+
+.homeButton {
+	display: inline-block;
+	padding: 5px 10px;
+	border: 2px solid #8f69b1;
+	background: linear-gradient(180deg, #ead1eb 0%, #c2a1cf 100%);
+	box-shadow: inset 1px 1px 0 #ffffff, inset -1px -1px 0 #8f69b1;
+	color: #4c2d66;
+	text-decoration: none;
+	font-family: Verdana, Tahoma, "Trebuchet MS", sans-serif;
+	font-size: 11px;
+	letter-spacing: 0.06em;
+	font-weight: 700;
+}
+
+.homeButton:hover {
+	background: linear-gradient(180deg, #e3c5e6 0%, #b890c4 100%);
+}
+
+.pageContent {
+	padding-top: 92px;
+	padding-bottom: 40px;
+	position: relative;
+	z-index: 1;
+}
+
+@media (max-width: 700px) {
+	.dividerTop {
+		top: -2px;
+	}
+
+	.dividerBottom {
+		bottom: 20px;
+	}
+
+	.flowerOne {
+		top: 158px;
+		right: 1px;
+	}
+
+	.flowerThree {
+		top: 64%;
+		left: 0;
+	}
+
+	.starThree {
+		top: 96px;
+		left: 0;
+	}
+
+	.starTwo {
+		bottom: 96px;
+		right: 3%;
+	}
+}

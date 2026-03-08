@@ -9,12 +9,40 @@
     align-items: start;
 }
 
+.collage,
+.windowContent,
+.textContent,
+.centeredTextContent,
+.skillSection,
+.skillCategory,
+.articleCard,
+.articleContent,
+.readMore,
+.downloadLink,
+.button,
+.textContent h2,
+.textContent h3,
+.textContent p,
+.textContent li,
+.centeredTextContent h2,
+.centeredTextContent p,
+.skillCategory h3,
+.skillCategory li,
+.articleContent h3,
+.articleContent p,
+.readMore {
+    font-family: Verdana, Tahoma, "Trebuchet MS", sans-serif;
+    color: #4c2d66;
+}
+
 .button {
-  padding: 10px 15px;
-  border: none;
+    padding: 5px 10px;
+    border: 2px solid #8f69b1;
   cursor: pointer;
-  font-size: 12px;
+    font-size: 11px;
   text-decoration: none;
+    background: linear-gradient(180deg, #ead1eb 0%, #c2a1cf 100%);
+    box-shadow: inset 1px 1px 0 #fff, inset -1px -1px 0 #8f69b1;
 }
 
 .downloadLink {
@@ -22,7 +50,7 @@
   font-size: 12px;
   display: flex;
   justify-content: center;
-  margin: 10px 0;
+    margin: 6px 0;
   align-self: center;
 }
 
@@ -51,6 +79,8 @@
     display: flex;
     align-items: flex-start;
     gap: 12px;
+    border-top: 1px dotted #b996cb;
+    padding-top: 6px;
 }
 
 .imageContainer {
@@ -58,8 +88,10 @@
 }
 
 .imageContainer img {
-    border-radius: 8px;
+    border-radius: 0;
     object-fit: cover;
+    border: 2px solid #8f69b1;
+    box-shadow: inset 1px 1px 0 #fff, inset -1px -1px 0 #8f69b1;
 }
 
 .textContent {
@@ -73,20 +105,21 @@
 .textContent h2 {
     margin: 0 0 6px 0;
     font-size: 26px;
-    color: #000000;
+    color: #4c2d66;
+    font-size: 18px;
 }
 
 .textContent h3 {
     margin: 0 0 4px 0;
-    font-size: 18px;
-    color: #000000;
+    font-size: 13px;
+    color: #4c2d66;
 }
 
 .textContent p {
     margin: 3px 0;
-    font-size: 16px;
+    font-size: 12px;
     line-height: 1.4;
-    color: #000000;
+    color: #4c2d66;
 }
 
 .textContent ul {
@@ -96,9 +129,9 @@
 
 .textContent li {
     margin: 3px 0;
-    font-size: 15px;
+    font-size: 12px;
     line-height: 1.3;
-    color: #000000;
+    color: #4c2d66;
 }
 
 .skillSection {
@@ -121,9 +154,9 @@
 }
 
 .skillCategory {
-    background-color: rgba(0, 0, 0, 0.05);
-    border: 1px solid #a3a3a3;
-    border-radius: 6px;
+    background: linear-gradient(180deg, #f4e3f4 0%, #e3cce5 100%);
+    border: 2px solid #8f69b1;
+    border-radius: 0;
     padding: 10px;
     text-align: center;
     width: 200px;
@@ -133,9 +166,9 @@
 
 .skillCategory h3 {
     margin: 0 0 8px 0;
-    font-size: 19px;
-    color: #000000;
-    border-bottom: 1px solid #666;
+    font-size: 12px;
+    color: #4c2d66;
+    border-bottom: 1px dotted #a679c7;
     padding-bottom: 4px;
 }
 
@@ -147,9 +180,9 @@
 
 .skillCategory li {
     margin: 3px 0;
-    font-size: 15px;
+    font-size: 11px;
     line-height: 1.3;
-    color: #000000;
+    color: #4c2d66;
 }
 
 @media screen and (max-width: 1000px) {
@@ -195,42 +228,45 @@
   align-items: center;
   gap: 16px;
   padding: 14px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
+    border: 2px solid #8f69b1;
+    border-radius: 0;
   text-decoration: none;
   color: inherit;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+    transition: none;
+    background: linear-gradient(180deg, #f4e3f4 0%, #e2c9e4 100%);
+    box-shadow: inset 1px 1px 0 #fff, inset -1px -1px 0 #8f69b1;
 }
 
 .articleCard:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    transform: none;
+    box-shadow: inset 1px 1px 0 #fff, inset -1px -1px 0 #8f69b1;
 }
 
 .articleImage {
   width: 250px;
   height: 220px;
-  border-radius: 2px;
+    border-radius: 0;
   object-fit: cover;
   flex-shrink: 0;
+    border: 2px solid #8f69b1;
 }
 
 .articleContent h3 {
   margin: 0 0 8px 0;
-  font-size: 1.05rem;
+    font-size: 12px;
   text-align: center;
 }
 
 .articleContent p {
   margin: 0 0 10px 0;
-  font-size: 0.9rem;
+    font-size: 12px;
   line-height: 1.4;
   text-align: center;
 }
 
 .readMore {
   font-weight: 600;
-  font-size: 0.85rem;
+    font-size: 11px;
   text-align: center;
   display: block;
 }
@@ -246,15 +282,15 @@
 
 .centeredTextContent h2 {
   margin: 0 0 6px 0;
-  font-size: 26px;
-  color: #000000;
+    font-size: 16px;
+    color: #4c2d66;
   text-align: center;
 }
 
 .centeredTextContent p {
   margin: 3px 0;
-  font-size: 16px;
+    font-size: 12px;
   line-height: 1.4;
-  color: #000000;
+    color: #4c2d66;
   text-align: center;
 }

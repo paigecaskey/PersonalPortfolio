@@ -1,88 +1,123 @@
-import Layout from '../components/Layout';
 import Image from 'next/image';
-import indexStyles from './index.module.css';
+import Link from 'next/link';
+import layoutStyles from './index.layout.module.css';
 import NowPlaying from '../components/NowPlaying';
-import Window from '../components/Window';
-import avatar from '../images/avatar.png';
+import TopArtists from '../components/TopArtists';
+import profile from '../images/profile.png';
+import dividerSticker from '../images/stickers/divider.gif';
+import flowerSticker from '../images/stickers/flower.gif';
+import onlineSticker from '../images/stickers/online.gif';
+import starSticker from '../images/stickers/star.gif';
+import welcomeBannerSticker from '../images/stickers/welcome_banner.gif';
+
 
 const HomePage = () => {
   return (
-    <Layout>
-      <div className={indexStyles.collage}>
-        <Window title="WELCOME" className={indexStyles['window-large']}>
-          <div className={indexStyles.profileBox}>
-            <div className={indexStyles.avatarBox}>
-              <Image src={avatar} alt="Avatar" />
+    <div className={layoutStyles.homeContainer}>
+        <div className={layoutStyles.homeStickerLayer} aria-hidden="true">
+          <Image src={dividerSticker} alt="" className={`${layoutStyles.homeDivider} ${layoutStyles.homeDividerTop}`} />
+          <Image src={dividerSticker} alt="" className={`${layoutStyles.homeDivider} ${layoutStyles.homeDividerBottom}`} />
+          <Image src={welcomeBannerSticker} alt="" className={`${layoutStyles.homeSticker} ${layoutStyles.stickerWelcome}`} />
+          <Image src={flowerSticker} alt="" className={`${layoutStyles.homeSticker} ${layoutStyles.stickerFlowerOne}`} />
+          <Image src={flowerSticker} alt="" className={`${layoutStyles.homeSticker} ${layoutStyles.stickerFlowerTwo}`} />
+          <Image src={flowerSticker} alt="" className={`${layoutStyles.homeSticker} ${layoutStyles.stickerFlowerThree}`} />
+          <Image src={starSticker} alt="" className={`${layoutStyles.homeSticker} ${layoutStyles.stickerStarOne}`} />
+          <Image src={starSticker} alt="" className={`${layoutStyles.homeSticker} ${layoutStyles.stickerStarTwo}`} />
+          <Image src={starSticker} alt="" className={`${layoutStyles.homeSticker} ${layoutStyles.stickerStarThree}`} />
+        </div>
+
+        <div className={layoutStyles.leftSection}>
+          <div className={layoutStyles.statusTicker}>
+            <Image src={onlineSticker} alt="Online" className={layoutStyles.onlineNowGif} />
+          </div>
+
+          <div className={`${layoutStyles.leftTopBox} ${layoutStyles.profileBoxVariant}`}>
+            <div className={`${layoutStyles.leftTitle} ${layoutStyles.titleProfile}`}>PAIGE CASKEY&apos;S PROFILE</div>
+            <div className={layoutStyles.leftBoxTextBelow}>
+              <p>
+                Hi, I&apos;m Paige. I&apos;m an AI Scientist, futurist, and creative technologist.
+              </p>
             </div>
-            <div className={indexStyles.textArea}>
-              <h2>PAIGE CASKEY</h2>
-              <h3>AI SCIENTIST</h3>
-              <div className={indexStyles.nowplayingbox}>
-                <NowPlaying />
+            <div className={layoutStyles.leftBoxContent}>
+              <div className={layoutStyles.leftImage}>
+                <Image src={profile} alt="Paige profile photo" width={420} height={420} />
               </div>
-              <p className={indexStyles.playingcaption}> ^ what I&apos;m listening to on spotify ^</p>
+              <div className={layoutStyles.leftBoxTextRight}>
+                <p><strong>location:</strong> Los Angeles, CA</p>
+                <p><strong>zodiac Sign:</strong> cancer</p>
+                <p><strong>favorite book:</strong> The Singularity is Near by Ray Kurtzweil</p>
+                <p><strong>currently:</strong> building things and being cool.</p>
+              </div>
             </div>
           </div>
-        </Window>
 
-        <Window title="ABOUT ME" className={indexStyles['window-medium']}>
-          <p>I&apos;m an <b>AI Scientist, creative technologist, and community advocate</b> passionate about building technology that is <b>human-centered, artistic, and inclusive.</b></p>
-          <p>My work spans across <b>research, devlopment, art, and leadership</b>. I combine innovation, empathy, and creativity to promote a thoughtful future with AI.</p>
-        </Window>
+          <div className={`${layoutStyles.leftBottomBox} ${layoutStyles.linksBoxVariant}`}>
+            <div className={`${layoutStyles.leftBottomTitle} ${layoutStyles.titleLinks}`}>Find Me Around The Web</div>
+            <div className={layoutStyles.leftBottomListContainer}>
+              <ul className={layoutStyles.leftBottomList}>
+                <li data-tag="MAIL">
+                  <a href="mailto:hello@example.com">email me</a>
+                </li>
+                <li data-tag="LINK">
+                  <a href="https://www.linkedin.com/in/paige-caskey/" target="_blank" rel="noreferrer">linkedin</a>
+                </li>
+                <li data-tag="CODE">
+                  <a href="https://github.com/paigecaskey" target="_blank" rel="noreferrer">github repos</a>
+                </li>
+              </ul>
+            </div>
+          </div>
 
-        <Window className={indexStyles['window-small']}>
-          {/* Top button as window title */}
-          <button onClick={() => window.location.href = "/career"}>
-            CAREER
-          </button>
-            <div style={{ marginTop: 10, width: '100%', display: 'flex', flexDirection: 'column', gap: 8 }}>
-              <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: 8 }}>
-                <button style={{ fontSize: '15px', padding: '6px 14px', margin: 0 }} onClick={() => window.location.href = "/career#education"}>Education</button>
-                <button style={{ fontSize: '15px', padding: '6px 14px', margin: 0 }} onClick={() => window.location.href = "/career#technical-skills"}>Technical Skills</button>
-                <button style={{ fontSize: '15px', padding: '6px 14px', margin: 0 }} onClick={() => window.location.href = "/career#sprout-social"}>Sprout Social</button>
-                <button style={{ fontSize: '15px', padding: '6px 14px', margin: 0 }} onClick={() => window.location.href = "/career#american-express"}>American Express</button>
-                <button style={{ fontSize: '15px', padding: '6px 14px', margin: 0 }} onClick={() => window.location.href = "/career#btt-ucla"}>BTT UCLA</button>
-                <button style={{ fontSize: '15px', padding: '6px 14px', margin: 0 }} onClick={() => window.location.href = "/career#lab-lab"}>L.A.B. Lab</button>
-                <button style={{ fontSize: '15px', padding: '6px 14px', margin: 0 }} onClick={() => window.location.href = "/career#giant-food"}>Giant Food</button>
+          <div className={`${layoutStyles.rightBox} ${layoutStyles.rightBoxShort} ${layoutStyles.nowPlayingBoxVariant}`}>
+            <div className={`${layoutStyles.rightBoxTitle} ${layoutStyles.titleNowPlaying}`}>Now Playing</div>
+            <div className={layoutStyles.rightBoxContent}>
+              <div className={layoutStyles.nowPlayingContainer}>
+                <NowPlaying />
+              </div>
+              <div className={layoutStyles.nowPlayingCaption}>
+                what I&apos;m listening to on spotify
               </div>
             </div>
-        </Window>
+          </div>
+        </div>
 
-        <Window className={indexStyles['window-small']}>
-          <button onClick={() => window.location.href = "/leadership"}>
-            LEADERSHIP
-          </button>
-            <div style={{ marginTop: 10, width: '100%', display: 'flex', flexDirection: 'column', gap: 8 }}>
-              <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: 8 }}>
-                <button style={{ fontSize: '15px', padding: '6px 14px', margin: 0 }} onClick={() => window.location.href = "/leadership#overview"}>Overview</button>
-                <button style={{ fontSize: '15px', padding: '6px 14px', margin: 0 }} onClick={() => window.location.href = "/leadership#featured-article"}>Featured Article</button>
-                <button style={{ fontSize: '15px', padding: '6px 14px', margin: 0 }} onClick={() => window.location.href = "/leadership#btt-ucla"}>BTT UCLA</button>
-                <button style={{ fontSize: '15px', padding: '6px 14px', margin: 0 }} onClick={() => window.location.href = "/leadership#panther-network"}>Panther Network</button>
-                <button style={{ fontSize: '15px', padding: '6px 14px', margin: 0 }} onClick={() => window.location.href = "/leadership#wist"}>Women in Science & Tech</button>
+        <div className={layoutStyles.rightSection}>
+          <div className={`${layoutStyles.rightBox} ${layoutStyles.rightBoxShort} ${layoutStyles.linksBoxVariant}`}>
+            <div className={`${layoutStyles.rightBoxTitle} ${layoutStyles.titleLinks}`}>Tabs / Other Pages</div>
+            <div className={layoutStyles.rightBoxContent}>
+              <div className={layoutStyles.pageTabs}>
+                <Link className={layoutStyles.pageTab} href="/career">career</Link>
+                {/* ART TAB (temporarily hidden) - uncomment to restore
+                <Link className={layoutStyles.pageTab} href="/art">art</Link>
+                */}
+                <Link className={layoutStyles.pageTab} href="/blog">blog</Link>
               </div>
             </div>
-        </Window>
+          </div>
 
-        <Window className={indexStyles['window-small']}>
-            <button onClick={() => window.location.href = "/creations"}>
-              CREATIONS
-            </button>
-            <div style={{ marginTop: 10, width: '100%', display: 'flex', flexDirection: 'column', gap: 8 }}>
-              <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: 8 }}>
-                <button style={{ fontSize: '15px', padding: '6px 14px', margin: 0 }} onClick={() => window.location.href = "/creations#main-content"}>Main Content</button>
-                <button style={{ fontSize: '15px', padding: '6px 14px', margin: 0 }} onClick={() => window.location.href = "/creations#sustainable-fashion"}>Sustainable Fashion</button>
-                <button style={{ fontSize: '15px', padding: '6px 14px', margin: 0 }} onClick={() => window.location.href = "/creations#visual-art"}>Visual Art</button>
-                <button style={{ fontSize: '15px', padding: '6px 14px', margin: 0 }} onClick={() => window.location.href = "/creations#creative-industries"}>Creative Industries</button>
-                <button style={{ fontSize: '15px', padding: '6px 14px', margin: 0 }} onClick={() => window.location.href = "/creations#educational-content"}>Educational Content</button>
-                <button style={{ fontSize: '15px', padding: '6px 14px', margin: 0 }} onClick={() => window.location.href = "/creations#technical-writing"}>Technical Writing</button>
-              </div>
+          <div className={layoutStyles.marqueeBar}>
+            <div className={layoutStyles.marqueeTrack}>
+              &lt;3 hello internet &lt;3 &lt;3 hello internet &lt;3 &lt;3 hello internet &lt;3 &lt;3 hello internet &lt;3
             </div>
-        </Window>
+          </div>
 
+          <div className={`${layoutStyles.rightBox} ${layoutStyles.rightBoxShort} ${layoutStyles.aboutBoxVariant}`}>
+            <div className={`${layoutStyles.rightBoxTitle} ${layoutStyles.titleAbout}`}>About Me</div>
+            <div className={layoutStyles.rightBoxContent}>
+              <p>building things on the internet</p>
+              <p>writing about AI &amp; technology</p>
+              <p>permanently curious</p>
+            </div>
+          </div>
 
-
+          <div className={`${layoutStyles.rightBox} ${layoutStyles.rightBoxLong} ${layoutStyles.top8BoxVariant}`}>
+            <div className={`${layoutStyles.rightBoxTitle} ${layoutStyles.titleTop8}`}>Top 8 Artists</div>
+            <div className={layoutStyles.rightBoxContent}>
+              <TopArtists />
+            </div>
+          </div>
+        </div>
       </div>
-    </Layout>
   );
 };
 

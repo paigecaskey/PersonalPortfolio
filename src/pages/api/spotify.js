@@ -9,6 +9,10 @@ export default async function handler(req, res) {
     const NOW_PLAYING_ENDPOINT = 'https://api.spotify.com/v1/me/player/currently-playing';
 
     async function getAccessToken() {
+        if (!client_id || !client_secret || !refresh_token) {
+            throw new Error('Missing Spotify credentials in environment variables');
+        }
+
         const basic = Buffer.from(`${client_id}:${client_secret}`).toString('base64'); 
         const requestBody = new URLSearchParams();
         requestBody.append('grant_type', 'refresh_token');
@@ -23,7 +27,12 @@ export default async function handler(req, res) {
             body: requestBody.toString(),
         });
 
-        return response.json();
+        const data = await response.json();
+        if (!response.ok || !data.access_token) {
+            throw new Error(data.error_description || data.error || 'Failed to refresh Spotify token');
+        }
+
+        return data;
     }
 
     try {
@@ -35,12 +44,17 @@ export default async function handler(req, res) {
             },
         });
 
-        if (!response.ok) {
-            return res.status(response.status).json({ error: "Failed to fetch currently playing song" });
-        }
-
         if (response.status === 204) {
             return res.status(204).json({ message: "No song playing" });
+        }
+
+        if (!response.ok) {
+            const message = await response.text();
+            return res.status(response.status).json({
+                error: 'Failed to fetch currently playing song',
+                spotifyStatus: response.status,
+                spotifyBody: message,
+            });
         }
 
         const song = await response.json();
@@ -51,6 +65,9 @@ export default async function handler(req, res) {
         });
 
     } catch (error) {
-        return res.status(500).json({ error: "Internal Server Error" });
+        return res.status(500).json({
+            error: 'Spotify now playing request failed',
+            detail: error.message,
+        });
     }
 }

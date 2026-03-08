@@ -1,49 +1,45 @@
 .window {
     width: 100%;
     height: auto;
-    margin: 10px;
+    margin: 4px;
     position: relative;
-    border: var(--border);
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 1%;
+    border: 2px solid #a679c7;
+    background: #efd3f0;
+    box-shadow: inset 1px 1px 0 #ffffff, inset -1px -1px 0 #9476b0;
 }
 
 .titlebartext {
-    font-size: 18px;
-    color: white;
-    transform: var(--wide-text);
-    margin-left: 15px;
-    padding: 5px;
+    font-size: 12px;
+    color: #4c2d66;
+    letter-spacing: 0.04em;
+    margin-left: 6px;
+    padding: 2px 0;
+    font-family: Verdana, Tahoma, "Trebuchet MS", sans-serif;
+    font-weight: 700;
 }
 
 .title-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
-    border-bottom: 2px solid #ccc;
-    font-size: 16px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-    background: linear-gradient(to right, #4a90e2, #9013fe);
-    border-radius: 1%;
+    padding: 3px 6px;
+    border-bottom: 2px solid #9f7ac1;
+    background: linear-gradient(to right, #ead1ec, #c49fcb);
 }
 
 .title-bar-controls {
     display: flex;
-    gap: 10px;
+    gap: 4px;
 }
 
 .title-bar-controls button {
     width: 12px;
     height: 12px;
-    background-color: gray;
-    border-radius: 50%;
-    border: none;
+    border: 1px solid #8a66ad;
+    border-radius: 0;
+    background: linear-gradient(180deg, #f2e2f3 0%, #d0b1d8 100%);
+    box-shadow: inset 1px 1px 0 #ffffff;
     cursor: pointer;
-}
-
-.title-bar-controls button:hover {
-    background-color: darkgray;
 }
 
 .windowbody {
@@ -51,96 +47,67 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    padding: 20px;
-    font-size: 15px;
+    padding: 8px;
+    font-size: 12px;
     margin: 0;
-    min-height: 100px;
+    min-height: 70px;
+    color: #4c2d66;
 }
 
 .windowbody p {
-    margin: 5px 0;
-    padding: 0;
-    line-height: 1.4;
-    font-size: 15px;
+    margin: 2px 0;
+    line-height: 1.35;
+    font-size: 12px;
 }
 
 .windowbody h2 {
-    margin: 10px 0;
-    font-size: 25px;
+    margin: 4px 0;
+    font-size: 16px;
+}
+
+.windowbody h3 {
+    margin: 4px 0;
+    font-size: 13px;
 }
 
 .windowbody ul {
     text-align: left;
-    margin: 10px 0;
+    margin: 4px 0;
+    padding-left: 16px;
 }
 
-.avatar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+.windowbody li {
+    font-size: 12px;
+    margin: 2px 0;
 }
-
-.avatar img {
-    height: 100px;
-    width: 100px;
-    margin-top: 10px;
-}
-    .window {
-        width: calc(100% - 20px);
-        margin: 5px;
-        margin-bottom: 45px;
-    }
-    .titlebartext {
-        font-size: 20px;
-    }
-    .windowbody h2 {
-        font-size: 30px;
-    }
-    .windowbody p {
-        font-size: 20px;
-    }
-    .windowbody li {
-        font-size: 25px;
-    }
 
 .windowbody button {
-    display: block;
-    width: 100%;
-    padding: 12px;
-    margin: 8px 0;
-    background-color: #c0c0c0;
-    border: 2px outset #c0c0c0;
+    display: inline-block;
+    width: auto;
+    padding: 5px 10px;
+    margin: 4px 0;
+    background: linear-gradient(180deg, #ead1eb 0%, #c2a1cf 100%);
+    border: 2px solid #8f69b1;
     border-radius: 0;
-    font-weight: bold;
-    font-size: 25px;
+    font-weight: 700;
+    font-size: 11px;
     cursor: pointer;
-    text-align: center;
-    font-family: inherit;
+    color: #4c2d66;
+    box-shadow: inset 1px 1px 0 #ffffff, inset -1px -1px 0 #8f69b1;
 }
 
 .windowbody button:hover {
-    background-color: #dfdfdf;
-}
-
-.windowbody button:active {
-    border: 2px inset #c0c0c0;
-    background-color: #a0a0a0;
+    background: linear-gradient(180deg, #e3c5e6 0%, #b890c4 100%);
 }
 
 @media screen and (max-width: 1000px) {
+    .window {
+        width: calc(100% - 8px);
+        margin: 4px;
+    }
+
     .windowbody {
-        min-height: 100px;
         align-items: center;
-        justify-content: center;
         text-align: center;
-    }
-    .windowbody button {
-        font-size: 30px;
-        padding: 10px;
-        margin: 6px 0;
-    }
-    .windowbody h3{
-        font-size: 25px;
     }
 }
