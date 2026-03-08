@@ -55,7 +55,7 @@ const HomePage = () => {
             <div className={layoutStyles.leftBottomListContainer}>
               <ul className={layoutStyles.leftBottomList}>
                 <li data-tag="MAIL">
-                  <a href="mailto:hello@example.com">email me</a>
+                  <a href="mailto:paigecaskey@gmail.com">email me</a>
                 </li>
                 <li data-tag="LINK">
                   <a href="https://www.linkedin.com/in/paige-caskey/" target="_blank" rel="noreferrer">linkedin</a>

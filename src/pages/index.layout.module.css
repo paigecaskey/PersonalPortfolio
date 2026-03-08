@@ -634,18 +634,22 @@
 
 @media (max-width:700px) {
   .homeDividerTop {
-    top: -3px;
+    top: 6px;
   }
 
   .homeDividerBottom {
-    bottom: 18px;
+    bottom: 8px;
   }
 
   .homeContainer {
     padding:
       calc(clamp(8px,1.5vh,20px) + 52px)
       clamp(10px,4vw,18px)
-      calc(clamp(8px,1.5vh,20px) + 12px);
+      calc(clamp(8px,1.5vh,20px) + 22px);
+  }
+
+  .stickerWelcome {
+    top: -16px;
   }
 
   .stickerFlowerOne {
