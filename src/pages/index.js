@@ -44,9 +44,8 @@ const HomePage = () => {
               </div>
               <div className={layoutStyles.leftBoxTextRight}>
                 <p><strong>location:</strong> Los Angeles, CA</p>
-                <p><strong>zodiac Sign:</strong> cancer</p>
+                <p><strong>zodiac sign:</strong> cancer</p>
                 <p><strong>favorite book:</strong> The Singularity is Near by Ray Kurtzweil</p>
-                <p><strong>currently:</strong> building things and being cool.</p>
               </div>
             </div>
           </div>
@@ -101,6 +100,7 @@ const HomePage = () => {
             </div>
           </div>
 
+          {/* ABOUT ME BOX (temporarily hidden) - uncomment to restore
           <div className={`${layoutStyles.rightBox} ${layoutStyles.rightBoxShort} ${layoutStyles.aboutBoxVariant}`}>
             <div className={`${layoutStyles.rightBoxTitle} ${layoutStyles.titleAbout}`}>About Me</div>
             <div className={layoutStyles.rightBoxContent}>
@@ -109,6 +109,7 @@ const HomePage = () => {
               <p>permanently curious</p>
             </div>
           </div>
+          */}
 
           <div className={`${layoutStyles.rightBox} ${layoutStyles.rightBoxLong} ${layoutStyles.top8BoxVariant}`}>
             <div className={`${layoutStyles.rightBoxTitle} ${layoutStyles.titleTop8}`}>Top 8 Artists</div>
