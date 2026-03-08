@@ -3,7 +3,7 @@ import Link from 'next/link';
 import layoutStyles from './index.layout.module.css';
 import NowPlaying from '../components/NowPlaying';
 import TopArtists from '../components/TopArtists';
-import profile from '../images/profile.png';
+import profile from '../images/avatar.png';
 import dividerSticker from '../images/stickers/divider.gif';
 import flowerSticker from '../images/stickers/flower.gif';
 import onlineSticker from '../images/stickers/online.gif';
