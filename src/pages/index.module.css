@@ -51,6 +51,8 @@
   font-size: max(1rem, calc(var(--name-size) * 0.16));
   letter-spacing: -0.02em;
   line-height: 1;
+  text-align: center;
+  text-decoration: none;
   -webkit-font-smoothing: antialiased;
   cursor: pointer;
   transition: transform 120ms ease;
