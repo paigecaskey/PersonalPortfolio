@@ -2,7 +2,7 @@ import Link from 'next/link';
 import styles from './index.module.css';
 
 const SECTIONS = [
-  { label: 'music!' },
+  { label: 'music!', href: '/music' },
   { label: 'tech!' },
   { label: 'fashion!' },
   { label: 'contact?', href: '/contact' },

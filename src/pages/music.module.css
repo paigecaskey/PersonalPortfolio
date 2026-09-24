@@ -1,0 +1,39 @@
+.page {
+  --green: #dbfe71;
+  --pink: #fd01fe;
+  --font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--green);
+}
+
+.back {
+  position: absolute;
+  top: 1.25rem;
+  left: 1.5rem;
+  color: var(--pink);
+  font-family: var(--font);
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+}
+
+.back:focus-visible {
+  outline: 3px solid var(--pink);
+  outline-offset: 3px;
+}
+
+.mark {
+  margin: 0;
+  color: var(--pink);
+  font-family: var(--font);
+  font-weight: 700;
+  font-size: clamp(4rem, 26vw, 16rem);
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
