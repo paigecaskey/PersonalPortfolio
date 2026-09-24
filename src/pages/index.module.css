@@ -1,18 +1,73 @@
 .page {
+  --green: #dbfe71;
+  --pink: #fd01fe;
+  --name-size: clamp(4rem, 26vw, 16rem);
+
   position: fixed;
   inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #dbfe71;
+  background: var(--green);
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
 }
 
 .name {
   margin: 0;
-  color: #fd01fe;
+  color: var(--pink);
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 700;
-  font-size: clamp(4rem, 18vw, 16rem);
+  font-size: var(--name-size);
   letter-spacing: -0.04em;
   line-height: 1;
+}
+
+/* Extends slightly past the word on each side. */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: calc(var(--name-size) * 0.06);
+  margin: calc(var(--name-size) * 0.12) -6% 0;
+}
+
+/* Scoped under .grid to outrank 98.css's global button styles. */
+.grid .button {
+  min-width: 0;
+  min-height: 0;
+  padding: 0.45em 0.6em;
+  border: none;
+  border-radius: 0;
+  background: var(--pink);
+  box-shadow: none;
+  color: var(--green);
+  text-shadow: none;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: max(1rem, calc(var(--name-size) * 0.16));
+  letter-spacing: -0.02em;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  cursor: pointer;
+  transition: transform 120ms ease;
+}
+
+.grid .button:hover {
+  box-shadow: none;
+  transform: translateY(-2px);
+}
+
+.grid .button:active {
+  box-shadow: none;
+  text-shadow: none;
+  transform: translateY(0);
+}
+
+.grid .button:focus-visible {
+  outline: 3px solid var(--pink);
+  outline-offset: 3px;
 }
