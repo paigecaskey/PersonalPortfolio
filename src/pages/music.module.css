@@ -33,6 +33,18 @@
   grid-column: 1 / -1;
 }
 
+/* Still stretched to fit, but the top 15% (ceiling/wall) is cut off
+   so the picture shifts up in the frame. */
+.clip {
+  min-height: 0;
+  overflow: hidden;
+}
+
+.clip video {
+  height: calc(100% / 0.85);
+  transform: translateY(-15%);
+}
+
 .back {
   position: absolute;
   z-index: 1;
