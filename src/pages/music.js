@@ -21,7 +21,7 @@ const MusicPage = () => (
       </div>
     </div>
     <Link href="/" className={styles.back}>&larr; paige.</Link>
-    <h1 className={styles.mark}>p.</h1>
+    <h1 className={styles.mark}>let me DJ 4 u :)))</h1>
   </main>
 );
 

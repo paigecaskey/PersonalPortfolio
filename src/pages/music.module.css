@@ -96,7 +96,9 @@
   color: var(--pink);
   font-family: var(--font);
   font-weight: 700;
-  font-size: clamp(4rem, 26vw, 16rem);
+  font-size: clamp(2.75rem, 8vw, 9rem);
   letter-spacing: -0.04em;
-  line-height: 1;
+  line-height: 0.95;
+  text-align: center;
+  padding: 0 1rem;
 }
