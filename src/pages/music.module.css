@@ -32,20 +32,44 @@
   height: 50%;
 }
 
-.bottomLeft,
-.bottomRight {
+/* The DJ clip and its mirror share the bottom half. */
+.bottom {
+  position: absolute;
   top: 50%;
-  width: 50%;
-  height: 50%;
-}
-
-.bottomLeft {
   left: 0;
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
 }
 
-.bottomRight {
-  left: 50%;
-  transform: scaleX(-1);
+/* Fill the bottom half, but never squish the portrait clip to less than half
+   its natural height; on wide screens the excess is trimmed, 1/4 from the top
+   and 3/4 from the bottom so heads stay in frame.
+   Min height = clip width (50vw) x 1422/800 aspect x 0.5 max squish. */
+.bottom video {
+  top: 25%;
+  width: 50%;
+  height: max(100%, 50vw * 1.7775 * 0.5);
+}
+
+.bottom .djLeft {
+  left: 0;
+  transform: translateY(-25%);
+}
+
+/* Overlaps by 1px so no gap can show at the seam. */
+.bottom .djRight {
+  left: calc(50% - 1px);
+  width: calc(50% + 1px);
+  transform: translateY(-25%) scaleX(-1);
+}
+
+/* One vignette over the pair so it reads as a single mirrored image. */
+.vignette {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse at center, transparent 50%, rgba(20, 5, 15, 0.45) 100%);
 }
 
 .back {
