@@ -21,7 +21,19 @@ const MusicPage = () => (
       </div>
     </div>
     <Link href="/" className={styles.back}>&larr; paige.</Link>
-    <h1 className={styles.mark}>let me DJ 4 u :)))</h1>
+    {/* Buttons match in size so the line stays dead center. */}
+    <div className={styles.stack}>
+      <a
+        className={styles.button}
+        href="https://soundcloud.com/404paigefound"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        soundcloud!
+      </a>
+      <h1 className={styles.mark}>let me DJ 4 u :)))</h1>
+      <button type="button" className={styles.button}>coming soon!</button>
+    </div>
   </main>
 );
 
