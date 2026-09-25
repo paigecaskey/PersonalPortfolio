@@ -14,23 +14,38 @@
 .collage {
   position: absolute;
   inset: 0;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  grid-template-rows: repeat(2, minmax(0, 1fr));
 }
 
-/* object-fit: fill stretches/squishes each image to its cell instead of cropping. */
+/* Each piece is pinned to an exact region of the screen and stretched/squished
+   to fill it (object-fit: fill), so nothing is ever cropped. */
 .collage img,
 .collage video {
+  position: absolute;
   display: block;
-  width: 100%;
-  height: 100%;
-  min-height: 0;
   object-fit: fill;
 }
 
 .top {
-  grid-column: 1 / -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+}
+
+.bottomLeft,
+.bottomRight {
+  top: 50%;
+  width: 50%;
+  height: 50%;
+}
+
+.bottomLeft {
+  left: 0;
+}
+
+.bottomRight {
+  left: 50%;
+  transform: scaleX(-1);
 }
 
 .back {
