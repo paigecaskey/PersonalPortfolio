@@ -33,39 +33,6 @@
   grid-column: 1 / -1;
 }
 
-/* 2016-era Instagram look (Clarendon/Valencia-ish): warm, punchy color,
-   faded blacks, soft vignette. */
-.insta2016 {
-  position: relative;
-  min-height: 0;
-  overflow: hidden;
-}
-
-.insta2016 video {
-  filter: sepia(0.25) saturate(1.5) contrast(1.1) brightness(1.25) hue-rotate(-8deg);
-}
-
-/* Lifts the shadows to a warm plum so blacks look faded, not pure black. */
-.insta2016::before,
-.insta2016::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-}
-
-.insta2016::before {
-  background: #3a2436;
-  mix-blend-mode: lighten;
-  opacity: 0.7;
-}
-
-.insta2016::after {
-  background:
-    radial-gradient(ellipse at center, transparent 55%, rgba(20, 5, 15, 0.45) 100%),
-    linear-gradient(rgba(255, 170, 110, 0.12), rgba(255, 170, 110, 0.12));
-}
-
 .back {
   position: absolute;
   z-index: 1;
