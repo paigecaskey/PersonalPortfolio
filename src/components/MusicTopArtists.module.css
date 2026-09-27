@@ -1,0 +1,61 @@
+.strip {
+  --green: #dbfe71;
+  --pink: #fd01fe;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem 0.75rem;
+  padding: 0.5rem 0.75rem;
+  background: var(--green);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.label {
+  color: var(--pink);
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: -0.01em;
+}
+
+.list {
+  display: flex;
+  gap: 0.35rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tile {
+  display: block;
+  width: clamp(2.25rem, 5vw, 3.25rem);
+  aspect-ratio: 1;
+  overflow: hidden;
+  background: var(--pink);
+  transition: transform 120ms ease;
+}
+
+a.tile:hover {
+  transform: translateY(-2px);
+}
+
+a.tile:focus-visible {
+  outline: 3px solid var(--pink);
+  outline-offset: 2px;
+}
+
+.tile img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.initial {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  color: var(--green);
+  font-weight: 700;
+}

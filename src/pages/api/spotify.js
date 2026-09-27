@@ -78,6 +78,7 @@ export default async function handler(req, res) {
             albumImageUrl: images[0]?.url || '',
             artist,
             title: item.name,
+            songUrl: item.external_urls?.spotify || '',
             isPlaying: Boolean(song.is_playing),
         });
 

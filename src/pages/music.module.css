@@ -88,6 +88,24 @@
   text-decoration: none;
 }
 
+/* Spotify widgets: now playing in the top-right corner, top artists
+   along the bottom edge. */
+.nowPlaying {
+  position: absolute;
+  z-index: 1;
+  top: 0.75rem;
+  right: 0.75rem;
+}
+
+.topArtists {
+  position: absolute;
+  z-index: 1;
+  bottom: 0.75rem;
+  left: 50%;
+  max-width: calc(100% - 1.5rem);
+  transform: translateX(-50%);
+}
+
 .back:focus-visible {
   outline: 3px solid var(--pink);
   outline-offset: 3px;

@@ -1,6 +1,8 @@
 /* eslint-disable @next/next/no-img-element -- media is stretched to fill, not optimized */
 import Link from 'next/link';
 import DjRequestForm from '../components/DjRequestForm';
+import MusicNowPlaying from '../components/MusicNowPlaying';
+import MusicTopArtists from '../components/MusicTopArtists';
 import styles from './music.module.css';
 
 const MusicPage = () => (
@@ -22,6 +24,9 @@ const MusicPage = () => (
       </div>
     </div>
     <Link href="/" className={styles.back}>&larr; paige.</Link>
+    <div className={styles.nowPlaying}>
+      <MusicNowPlaying />
+    </div>
     <div className={styles.stack}>
       <a
         className={styles.button}
@@ -33,6 +38,9 @@ const MusicPage = () => (
       </a>
       <h1 className={styles.mark}>let me DJ 4 u :)))</h1>
       <DjRequestForm />
+    </div>
+    <div className={styles.topArtists}>
+      <MusicTopArtists />
     </div>
   </main>
 );
