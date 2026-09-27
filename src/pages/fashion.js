@@ -93,7 +93,7 @@ const FashionPage = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              depop
+              depop!
             </a>
           </div>
         </div>
