@@ -4,7 +4,7 @@ import styles from './index.module.css';
 const SECTIONS = [
   { label: 'music!', href: '/music' },
   { label: 'tech!' },
-  { label: 'fashion!' },
+  { label: 'fashion!', href: '/fashion' },
   { label: 'contact?', href: '/contact' },
 ];
 
