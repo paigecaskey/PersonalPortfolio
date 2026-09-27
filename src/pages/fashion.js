@@ -85,6 +85,16 @@ const FashionPage = () => {
           ))}
           <div className={styles.center}>
             <Link href="/" className={styles.back}>&larr; paige.</Link>
+            <h1 className={styles.title}>I HAVE CUTE CLOTHES!</h1>
+            <p className={styles.subtitle}>and you can too ;)</p>
+            <a
+              className={styles.button}
+              href="https://www.depop.com/paigeinthemachine/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              depop
+            </a>
           </div>
         </div>
       )}
