@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element -- media is stretched to fill, not optimized */
 import Link from 'next/link';
+import DjRequestForm from '../components/DjRequestForm';
 import styles from './music.module.css';
 
 const MusicPage = () => (
@@ -21,7 +22,6 @@ const MusicPage = () => (
       </div>
     </div>
     <Link href="/" className={styles.back}>&larr; paige.</Link>
-    {/* Buttons match in size so the line stays dead center. */}
     <div className={styles.stack}>
       <a
         className={styles.button}
@@ -32,7 +32,7 @@ const MusicPage = () => (
         soundcloud!
       </a>
       <h1 className={styles.mark}>let me DJ 4 u :)))</h1>
-      <button type="button" className={styles.button}>coming soon!</button>
+      <DjRequestForm />
     </div>
   </main>
 );
