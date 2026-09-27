@@ -1,0 +1,113 @@
+.page {
+  --green: #dbfe71;
+  --pink: #fd01fe;
+  --font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  background: var(--green);
+}
+
+.board {
+  position: absolute;
+  left: 0;
+  display: grid;
+}
+
+.pink {
+  background: var(--pink);
+}
+
+.photo {
+  overflow: hidden;
+  background: var(--pink);
+}
+
+.photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* The big green rectangle: every tile except the outer ring. Text sizes use
+   container units (cqi) so they scale with the rectangle, not the window. */
+.center {
+  position: relative;
+  grid-row: 2 / -2;
+  grid-column: 2 / -2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(0.5rem, 3cqi, 1.75rem);
+  padding: 3rem 1rem;
+  container-type: inline-size;
+  background: var(--green);
+  text-align: center;
+}
+
+.title,
+.subtitle {
+  margin: 0;
+  color: var(--pink);
+  font-family: var(--font);
+  font-weight: 700;
+  line-height: 0.95;
+}
+
+.title {
+  font-size: clamp(1.75rem, 8cqi, 7rem);
+  letter-spacing: -0.04em;
+}
+
+.subtitle {
+  font-size: clamp(1.1rem, 4cqi, 3rem);
+  letter-spacing: -0.02em;
+}
+
+.button {
+  display: block;
+  box-sizing: border-box;
+  width: min(100%, 16rem);
+  margin-top: clamp(0.25rem, 1.5cqi, 1rem);
+  padding: 0.45em 0.6em;
+  background: var(--pink);
+  color: var(--green);
+  font-family: var(--font);
+  font-weight: 700;
+  font-size: clamp(1.1rem, 3.5cqi, 2rem);
+  letter-spacing: -0.02em;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 120ms ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button:focus-visible {
+  outline: 3px solid var(--pink);
+  outline-offset: 3px;
+}
+
+.back {
+  position: absolute;
+  top: 1rem;
+  left: 1.25rem;
+  color: var(--pink);
+  font-family: var(--font);
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+}
+
+.back:focus-visible {
+  outline: 3px solid var(--pink);
+  outline-offset: 3px;
+}

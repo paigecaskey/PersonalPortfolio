@@ -1,0 +1,176 @@
+.page {
+  --green: #dbfe71;
+  --pink: #fd01fe;
+  --font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--green);
+}
+
+/* Dark backdrop so sub-pixel gaps between pieces never show the page's green. */
+.collage {
+  position: absolute;
+  inset: 0;
+  background: #14060f;
+}
+
+/* Each piece is pinned to an exact region of the screen and stretched/squished
+   to fill it (object-fit: fill), so nothing is ever cropped. */
+.collage img,
+.collage video {
+  position: absolute;
+  display: block;
+  object-fit: fill;
+}
+
+/* Extends 2px under the bottom half so no seam opens between them. */
+.top {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(50% + 2px);
+}
+
+/* The DJ clip and its mirror share the bottom half. */
+.bottom {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+}
+
+/* Fill the bottom half, but never squish the portrait clip to less than half
+   its natural height; on wide screens the excess is trimmed, 1/4 from the top
+   and 3/4 from the bottom so heads stay in frame.
+   Min height = clip width (50vw) x 1422/800 aspect x 0.5 max squish. */
+.bottom video {
+  top: 25%;
+  width: 50%;
+  height: max(100%, 50vw * 1.7775 * 0.5);
+}
+
+.bottom .djLeft {
+  left: 0;
+  transform: translateY(-25%);
+}
+
+/* Overlaps by 1px so no gap can show at the seam. */
+.bottom .djRight {
+  left: calc(50% - 1px);
+  width: calc(50% + 1px);
+  transform: translateY(-25%) scaleX(-1);
+}
+
+/* One vignette over the pair so it reads as a single mirrored image. */
+.vignette {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse at center, transparent 50%, rgba(20, 5, 15, 0.45) 100%);
+}
+
+.back {
+  position: absolute;
+  z-index: 1;
+  top: 1.25rem;
+  left: 1.5rem;
+  color: var(--pink);
+  font-family: var(--font);
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+}
+
+/* Spotify widgets: now playing in the top-right corner, top artists
+   along the bottom edge. */
+.nowPlaying {
+  position: absolute;
+  z-index: 1;
+  top: 0.75rem;
+  right: 0.75rem;
+}
+
+.topArtists {
+  position: absolute;
+  z-index: 1;
+  bottom: 0.75rem;
+  left: 50%;
+  max-width: calc(100% - 1.5rem);
+  transform: translateX(-50%);
+}
+
+.back:focus-visible {
+  outline: 3px solid var(--pink);
+  outline-offset: 3px;
+}
+
+.mark {
+  position: relative;
+  margin: 0;
+  color: var(--pink);
+  font-family: var(--font);
+  font-weight: 700;
+  font-size: clamp(2.75rem, 8vw, 9rem);
+  letter-spacing: -0.04em;
+  line-height: 0.95;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.stack {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(1rem, 3vh, 2rem);
+}
+
+/* Matches the homepage buttons; scoped under .stack to outrank 98.css's
+   global button styles. */
+.stack .button {
+  display: block;
+  box-sizing: border-box;
+  width: min(80vw, 20rem);
+  min-width: 0;
+  min-height: 0;
+  padding: 0.45em 0.6em;
+  border: none;
+  border-radius: 0;
+  background: var(--pink);
+  box-shadow: none;
+  color: var(--green);
+  text-shadow: none;
+  font-family: var(--font);
+  font-weight: 700;
+  font-size: clamp(1.1rem, 2.4vw, 2rem);
+  letter-spacing: -0.02em;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  cursor: pointer;
+  transition: transform 120ms ease;
+}
+
+.stack .button:hover {
+  box-shadow: none;
+  transform: translateY(-2px);
+}
+
+.stack .button:active {
+  box-shadow: none;
+  text-shadow: none;
+  transform: translateY(0);
+}
+
+.stack .button:focus-visible {
+  outline: 3px solid var(--pink);
+  outline-offset: 3px;
+}

@@ -15,6 +15,7 @@ const getAccessToken = async (clientId, clientSecret, refreshToken) => {
 
   const response = await fetch(TOKEN_ENDPOINT, {
     method: 'POST',
+    cache: 'no-store',
     headers: {
       Authorization: `Basic ${basic}`,
       'Content-Type': 'application/x-www-form-urlencoded',
@@ -47,13 +48,14 @@ export default async function handler(req, res) {
   try {
     const { access_token: accessToken } = await getAccessToken(clientId, clientSecret, refreshToken);
     const response = await fetch(TOP_ARTISTS_ENDPOINT, {
+      cache: 'no-store',
       headers: {
         Authorization: `Bearer ${accessToken}`,
       },
     });
 
     if (response.status === 204) {
-      return res.status(204).json({ artists: [] });
+      return res.status(200).json({ artists: [] });
     }
 
     if (!response.ok) {
